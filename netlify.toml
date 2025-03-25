@@ -1,6 +1,11 @@
 [[headers]]
-  for = "/*.m3u8"
+  for = "/video.m3u8"
   [headers.values]
     Content-Type = "application/vnd.apple.mpegurl"
-    Cache-Control = "public, max-age=3600"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/segments/*"
+  [headers.values]
+    Content-Type = "video/mp2t"
     Access-Control-Allow-Origin = "*"
